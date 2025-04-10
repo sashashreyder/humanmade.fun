@@ -17,12 +17,12 @@ const Comparison = () => {
     };
 
   return (
-    <section className="py-20 px-6 text-white text-center">
+    <section className="py-10 px-6 text-white text-center">
       
-      <div className="flex justify-center items-center gap-20 mb-10">
+      <div className="flex justify-center items-center gap-30 mb-20 mt-10">
         <button
-          className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
-            !isHuman
+          className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer 
+          ${!isHuman
               ? 'bg-gray-200 text-gray-800 hover:bg-gray-300'
               : 'bg-transparent text-gray-500 hover:bg-transparent'
           } border border-gray-300`}
@@ -31,8 +31,8 @@ const Comparison = () => {
           Template
         </button>
         <button
-          className={`relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer ${
-            isHuman
+          className={`relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer 
+          ${isHuman
               ? 'bg-blue-600 text-white hover:bg-blue-500 transform hover:scale-115'
               : 'bg-transparent text-gray-500 hover:bg-transparent'
           } border border-blue-600`}

@@ -2,6 +2,8 @@ const Hero = () => {
     return (
         <section className="relative overflow-hidden flex flex-col items-center justify-center text-center py-40 px-6 bg-gradient-to-b from-gray-900 via-black to-gray-950">
         
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-b from-transparent to-black blur-background"></div>
+
         <div className="absolute top-0 left-0 w-full h-full area pointer-events-none z-0">
           <ul className="circles">
             {[...Array(10)].map((_, i) => (
@@ -27,9 +29,10 @@ const Hero = () => {
         </div>
       </section>
     )
-  }
-  
-  export default Hero
+}
+
+export default Hero;
+
   
   
   
