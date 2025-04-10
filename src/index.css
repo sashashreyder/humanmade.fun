@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 @import "tailwindcss";
 
 
@@ -8,6 +9,10 @@
 }
 .font-inter {
   font-family: 'Inter', sans-serif;
+}
+
+.font-caveat {
+  font-family: 'Caveat', cursive;
 }
 
 /* Animated bg, resource: https://tailwindflex.com/@anonymous/background-animation */
@@ -102,6 +107,29 @@
   75%  { opacity: 1; }
   100% { opacity: 1; }
 }
+
+/* Human Btn Animation */
+
+@keyframes ping {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.particle {
+  animation: ping 1.5s ease-out forwards;
+}
+
+
 
 
 
