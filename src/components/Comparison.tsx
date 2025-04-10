@@ -42,7 +42,6 @@ const Comparison = () => {
           
           {showParticles && (
             <div className="absolute inset-0 flex justify-center items-center z-10">
-              
               <div className="particle w-6 h-6 bg-indigo-300 rounded-full opacity-75 absolute" style={{ top: '-15px', left: '25px' }}></div>
               <div className="particle w-6 h-6 bg-teal-400 rounded-full opacity-75 absolute" style={{ top: '20px', left: '-30px' }}></div>
               <div className="particle w-8 h-8 bg-gray-400 rounded-full opacity-75 absolute" style={{ top: '-25px', left: '-30px' }}></div>
@@ -55,11 +54,38 @@ const Comparison = () => {
           )}
         </button>
       </div>
+
+      
+      {!isHuman && (
+        <div className="bg-gray-800 text-gray-400 p-8 rounded-lg shadow-xl mt-10">
+          <h2 className="text-3xl mb-4 font-semibold text-white">Template Side</h2>
+          <p className="text-lg mb-4 text-white">
+            nothing.
+          </p>
+          <button className="px-6 py-2 mt-4 bg-gray-700 text-gray-300 rounded-md text-base hover:bg-gray-600 transition-all cursor-pointer">
+            Select Template
+          </button>
+        </div>
+      )}
+
+      
+      {isHuman && (
+        <div className="bg-blue-600 text-white p-8 rounded-lg shadow-xl mt-10">
+          <h2 className="text-3xl mb-4 font-semibold">Human Side</h2>
+          <p className="text-lg mb-4">
+            Creative, original....
+          </p>
+          <button className="px-6 py-2 mt-4 bg-pink-600 text-white rounded-full text-lg hover:bg-pink-500 hover:scale-105 transition-all shadow-lg cursor-pointer">
+            Live a little →
+          </button>
+        </div>
+      )}
     </section>
   );
 };
 
 export default Comparison;
+
 
 
 
