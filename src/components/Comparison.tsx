@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
 const Comparison = () => {
-  const [isHuman, setIsHuman] = useState(true);
+  const [isHuman, setIsHuman] = useState(false);
   const [showParticles, setShowParticles] = useState(false);
-  const [isTemplate, setIsTemplate] = useState(false); // Состояние для отображения Template
+  const [isTemplate, setIsTemplate] = useState(true); 
 
   const handleClick = (type: string) => {
     setIsHuman(type === 'human');
-    setIsTemplate(type === 'template'); // Когда нажимается Template, меняем состояние
+    setIsTemplate(type === 'template'); 
 
     if (type === 'human') {
         setShowParticles(false); 
@@ -19,7 +19,7 @@ const Comparison = () => {
     };
 
   return (
-    <section id="comparison" className= "px-6 text-white text-center relative">
+    <section id="comparison" className="px-6 text-white text-center relative">
       <div className="flex justify-center items-center gap-30 mt-10">
         <button
           className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer 
@@ -32,15 +32,14 @@ const Comparison = () => {
           Template
         </button>
         <button
-          className={`relative px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer 
-          ${isHuman
-              ? 'bg-blue-600 text-white hover:bg-blue-500 transform hover:scale-115'
-              : 'bg-transparent text-gray-500 hover:bg-transparent'
-          } border border-blue-600`}
-          onClick={() => handleClick('human')}
-        >
-          Human
-          
+  className={`relative px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer 
+    ${isHuman 
+      ? 'bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-lg' 
+      : 'bg-pink-400 text-white-500  hover:bg-pink-500 hover:text-white'}
+    hover:scale-105 `}
+  onClick={() => handleClick('human')}
+>
+  Human
           {showParticles && (
             <div className="absolute inset-0 flex justify-center items-center z-10">
               <div className="particle w-6 h-6 bg-indigo-300 rounded-full opacity-75 absolute" style={{ top: '-15px', left: '25px' }}></div>
@@ -140,13 +139,12 @@ const Comparison = () => {
   </div>
 )}
 
-
-
     </section>
   );
 };
 
 export default Comparison;
+
 
 
 
