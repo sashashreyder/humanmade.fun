@@ -63,6 +63,7 @@ const Comparison = () => {
             autoPlay
             loop
             muted
+            style={{ pointerEvents: 'none' }}
           />
           <h2 className="text-4xl mt-6 mb-4 font-semibold text-white" style={{ fontFamily: 'Merienda, sans-serif', position: 'relative', zIndex: 1 }}>
             Human Side
