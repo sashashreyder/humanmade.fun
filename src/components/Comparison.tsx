@@ -17,7 +17,7 @@ const Comparison = () => {
     };
 
   return (
-    <section className="py-10 px-6 text-white text-center relative">
+    <section id="comparison" className="py-10 px-6 text-white text-center relative">
       
       <div className="flex justify-center items-center gap-30 mb-20 mt-10">
         <button
@@ -58,23 +58,25 @@ const Comparison = () => {
       {isHuman && (
         <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden" 
              style={{ backgroundImage: "url('/src/assets/coolbackgrounds-fractalize-sea_edge.png')", backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-          <h2 className="text-4xl mb-6 font-semibold text-white">Human Side</h2>
+         <h2 className="text-4xl mb-6 font-semibold text-white" style={{ fontFamily: 'Merienda, sans-serif' }}>
+          Human Side
+        </h2>
           <p className="text-xl mb-6">
             Creative, original ideas that come from the human soul and mind.
           </p>
           
-          <div className="relative z-10 flex flex-col items-start">
-            <div className="flex items-center mb-4">
-              <img src="/src/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-12 h-12 mr-4" />
-              <span className="text-lg">With love</span>
+          <div className="relative z-10 flex flex-col items-start gap-10 ml-20">
+            <div className="flex items-center mb-6">
+              <img src="/src/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-14 h-14 mr-4" />
+              <span className="text-lg">Emotional</span>
             </div>
-            <div className="flex items-center mb-4">
-              <img src="/src/assets/free-icon-artbook-14701758.png" alt="artbook" className="w-12 h-12 mr-4" />
-              <span className="text-lg">With soul</span>
+            <div className="flex items-center mb-6">
+              <img src="/src/assets/free-icon-artbook-14701758.png" alt="artbook" className="w-14 h-14 mr-4" />
+              <span className="text-lg">Creative</span>
             </div>
-            <div className="flex items-center mb-4">
-              <img src="/src/assets/free-icon-digital-art-12493083.png" alt="digital art" className="w-12 h-12 mr-4" />
-              <span className="text-lg">Something else</span>
+            <div className="flex items-center mb-6">
+              <img src="/src/assets/free-icon-digital-art-12493083.png" alt="digital art" className="w-14 h-14 mr-4" />
+              <span className="text-lg">Different</span>
             </div>
           </div>
 
@@ -88,6 +90,7 @@ const Comparison = () => {
 };
 
 export default Comparison;
+
 
 
 
