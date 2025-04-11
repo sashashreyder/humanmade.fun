@@ -19,8 +19,8 @@ const Comparison = () => {
     };
 
   return (
-    <section id="comparison" className="py-10 px-6 text-white text-center relative">
-      <div className="flex justify-center items-center gap-30 mb-20 mt-10">
+    <section id="comparison" className= "px-6 text-white text-center relative">
+      <div className="flex justify-center items-center gap-30 mt-10">
         <button
           className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer 
           ${!isHuman
@@ -114,7 +114,7 @@ const Comparison = () => {
           </a>
         </div>
       )}
-      
+
       {isTemplate && (
   <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden bg-gray-100">
     <h2 className="text-4xl mt-2 mb-10 font-semibold text-gray-800">
