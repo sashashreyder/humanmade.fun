@@ -20,10 +20,10 @@ const Hero = () => {
         <p className="text-lg sm:text-lg text-gray-300 max-w-xl mx-auto mb-6">
           Use AI as a helper, not a creator.</p> 
 
-          <p className="text-white text-xl sm:text-md md:text-xl font-orbitron neon-movie text-center">
-           <span className="text-pink-400">&lt;</span>
-           <span>Made by a human</span>
-          <span className="text-pink-400"> /&gt;</span>
+        <p className="text-white text-xl sm:text-base md:text-xl font-orbitron neon-movie text-center whitespace-nowrap">
+         <span className="text-pink-400">&lt;</span>
+         <span>Made by a human</span>
+         <span className="text-pink-400"> /&gt;</span>
         </p>
       </div>
 

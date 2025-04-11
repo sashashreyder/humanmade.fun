@@ -37,7 +37,7 @@ const Footer = () => {
             <span className="text-white">ChatGPT for assistance in speeding up my work</span>
           </div>
   
-          <p className="text-center mt-6 text-white">
+          <p className="text-center mt-2 text-white">
             Inspired by #CanvaCreate.  
             Coded with soul by Aleksandra Shreider.
           </p>

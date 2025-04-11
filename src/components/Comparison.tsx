@@ -58,13 +58,16 @@ const Comparison = () => {
       {isHuman && (
         <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden">
           <video
-            className="absolute inset-0 w-full h-full object-cover"
-            src="/assets/videobg.mp4"
-            autoPlay
-            loop
-            muted
-            style={{ pointerEvents: 'none' }}
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/assets/videobg.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          disablePictureInPicture
+          style={{ pointerEvents: 'none' }}
           />
+
           <h2 className="text-4xl mt-6 mb-4 font-semibold text-white" style={{ fontFamily: 'Merienda, sans-serif', position: 'relative', zIndex: 1 }}>
             Human Side
           </h2>
