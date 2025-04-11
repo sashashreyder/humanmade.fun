@@ -55,48 +55,54 @@ const Comparison = () => {
       </div>
 
       {isHuman && (
-        <div
-          className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden"
-          style={{
-            backgroundImage: "url('/src/assets/coolbackgrounds-fractalize-sea_edge.png')",
-            backgroundSize: 'cover',
-            backgroundPosition: 'center center'
-          }}
-        >
-          <h2 className="text-4xl mt-6 mb-4 font-semibold text-white" style={{ fontFamily: 'Merienda, sans-serif' }}>
+        <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="/src/assets/videobg.mp4"
+          autoPlay
+          loop
+          muted
+        />
+          <h2 className="text-4xl mt-6 mb-4 font-semibold text-white" style={{ fontFamily: 'Merienda, sans-serif', position: 'relative', zIndex: 1 }}>
             Human Side
           </h2>
-          <p className="text-xl mb-10">
-            Creative, original ideas that come from the human soul and mind.
+          <p className="text-l mb-20" style={{ position: 'relative', zIndex: 1 }}>
+          Tap on the icons to see the masterpieces. <br />
+          Creative and original ideas that come from the human soul and mind.
           </p>
-
-          <div className="relative z-10 flex flex-wrap justify-between items-center gap-12 ml-20 mb-10">
-            <div className="flex items-center mb-4 group relative">
-              <div className="w-20 h-20 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 animate-pulse rounded-full flex items-center justify-center mr-4">
-                <img src="/src/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-12 h-12" />
+          <div className="relative z-10 flex flex-wrap justify-between items-center gap-12 ml-20 mb-15">
+            <a href="https://www.paffi.it/" target="_blank" rel="noopener noreferrer">
+              <div className="flex items-center mb-4 group relative">
+                <div className="w-20 h-20 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 animate-pulse rounded-full flex items-center justify-center mr-4">
+                  <img src="/src/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-12 h-12" />
+                </div>
+                <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
+                  EMOTIONAL
+                </span>
               </div>
-              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
-                EMOTIONAL
-              </span>
-            </div>
+            </a>
 
-            <div className="flex items-center mb-4 group relative">
-              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 via-orange-600 to-red-600 animate-pulse rounded-full flex items-center justify-center mr-4">
-                <img src="/src/assets/free-icon-artbook-14701758.png" alt="artbook" className="w-12 h-12" />
+            <a href="https://tryboredcow.com/" target="_blank" rel="noopener noreferrer">
+              <div className="flex items-center mb-4 group relative">
+                <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 via-orange-600 to-red-600 animate-pulse rounded-full flex items-center justify-center mr-4">
+                  <img src="/src/assets/free-icon-artbook-14701758.png" alt="artbook" className="w-12 h-12" />
+                </div>
+                <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-23.5">
+                  CREATIVE
+                </span>
               </div>
-              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-23.5">
-                CREATIVE
-              </span>
-            </div>
+            </a>
 
-            <div className="flex items-center mb-4 group relative">
-              <div className="w-20 h-20 bg-gradient-to-r from-teal-500 via-blue-500 to-indigo-600 animate-pulse rounded-full flex items-center justify-center mr-4">
-                <img src="/src/assets/free-icon-digital-art-12493083.png" alt="digital art" className="w-12 h-12" />
+            <a href="https://immersive-g.com/" target="_blank" rel="noopener noreferrer">
+              <div className="flex items-center mb-4 group relative">
+                <div className="w-20 h-20 bg-gradient-to-r from-teal-500 via-blue-500 to-indigo-600 animate-pulse rounded-full flex items-center justify-center mr-4">
+                  <img src="/src/assets/free-icon-digital-art-12493083.png" alt="digital art" className="w-12 h-12" />
+                </div>
+                <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
+                  DIFFERENT
+                </span>
               </div>
-              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
-                DIFFERENT
-              </span>
-            </div>
+            </a>
           </div>
 
           <a href="https://asoftmurmur.com/" target="_blank" rel="noopener noreferrer">
@@ -111,6 +117,8 @@ const Comparison = () => {
 };
 
 export default Comparison;
+
+
 
 
 
