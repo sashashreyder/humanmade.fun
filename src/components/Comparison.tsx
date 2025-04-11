@@ -3,10 +3,12 @@ import { useState } from 'react';
 const Comparison = () => {
   const [isHuman, setIsHuman] = useState(true);
   const [showParticles, setShowParticles] = useState(false);
+  const [isTemplate, setIsTemplate] = useState(false); // Состояние для отображения Template
 
   const handleClick = (type: string) => {
     setIsHuman(type === 'human');
-    
+    setIsTemplate(type === 'template'); // Когда нажимается Template, меняем состояние
+
     if (type === 'human') {
         setShowParticles(false); 
         setTimeout(() => {
@@ -105,18 +107,47 @@ const Comparison = () => {
             </a>
           </div>
 
-          <a href="https://asoftmurmur.com/" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.rainymood.com/" target="_blank" rel="noopener noreferrer">
             <button className="px-6 py-3 mt-4 mb-6 bg-pink-400 text-white rounded-full text-lg hover:bg-pink-500 hover:scale-105 transition-all duration-300 ease-in-out shadow-lg cursor-pointer relative z-10">
               Enjoy the moment →
             </button>
           </a>
         </div>
       )}
+      
+      {isTemplate && (
+  <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden bg-gray-100">
+    <h2 className="text-4xl mt-2 mb-10 font-semibold text-gray-800">
+      Template Section
+    </h2>
+    <div className="flex">
+      <div className="w-1/2 pr-6">
+        <p className="text-lg mb-8 ml-20 text-left text-gray-700">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula eros ut risus feugiat, non tincidunt eros vulputate. Ut tristique ante et turpis volutpat, sit amet volutpat nunc malesuada. Aenean ut nibh in sapien lacinia elementum.
+          <br /><br />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula eros ut risus feugiat, non tincidunt eros vulputate. Ut tristique ante et turpis volutpat, sit amet volutpat nunc malesuada. Aenean ut nibh in sapien lacinia elementum.
+        </p>
+      </div>
+      <div className="w-1/2 pl-6 flex justify-center items-center flex-col">
+        <div className="w-46 h-46 mb-6 bg-gray-300 flex justify-center items-center rounded-lg">
+          <span className="text-xl text-gray-500">Your Image Here</span>
+        </div>
+        <button className="px-15 py-3 mb-5 bg-gray-500 text-white rounded-full text-lg hover:bg-gray-600 transition-all duration-300 ease-in-out shadow-lg cursor-pointer">
+          Buy
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
+
+
     </section>
   );
 };
 
 export default Comparison;
+
 
 
 
