@@ -18,7 +18,6 @@ const Comparison = () => {
 
   return (
     <section id="comparison" className="py-10 px-6 text-white text-center relative">
-      
       <div className="flex justify-center items-center gap-30 mb-20 mt-10">
         <button
           className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer 
@@ -56,33 +55,55 @@ const Comparison = () => {
       </div>
 
       {isHuman && (
-        <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden" 
-             style={{ backgroundImage: "url('/src/assets/coolbackgrounds-fractalize-sea_edge.png')", backgroundSize: 'cover', backgroundPosition: 'center center' }}>
-         <h2 className="text-4xl mb-6 font-semibold text-white" style={{ fontFamily: 'Merienda, sans-serif' }}>
-          Human Side
-        </h2>
-          <p className="text-xl mb-6">
+        <div
+          className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden"
+          style={{
+            backgroundImage: "url('/src/assets/coolbackgrounds-fractalize-sea_edge.png')",
+            backgroundSize: 'cover',
+            backgroundPosition: 'center center'
+          }}
+        >
+          <h2 className="text-4xl mt-6 mb-4 font-semibold text-white" style={{ fontFamily: 'Merienda, sans-serif' }}>
+            Human Side
+          </h2>
+          <p className="text-xl mb-10">
             Creative, original ideas that come from the human soul and mind.
           </p>
-          
-          <div className="relative z-10 flex flex-col items-start gap-10 ml-20">
-            <div className="flex items-center mb-6">
-              <img src="/src/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-14 h-14 mr-4" />
-              <span className="text-lg">Emotional</span>
+
+          <div className="relative z-10 flex flex-wrap justify-between items-center gap-12 ml-20 mb-10">
+            <div className="flex items-center mb-4 group relative">
+              <div className="w-20 h-20 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 animate-pulse rounded-full flex items-center justify-center mr-4">
+                <img src="/src/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-12 h-12" />
+              </div>
+              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
+                EMOTIONAL
+              </span>
             </div>
-            <div className="flex items-center mb-6">
-              <img src="/src/assets/free-icon-artbook-14701758.png" alt="artbook" className="w-14 h-14 mr-4" />
-              <span className="text-lg">Creative</span>
+
+            <div className="flex items-center mb-4 group relative">
+              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 via-orange-600 to-red-600 animate-pulse rounded-full flex items-center justify-center mr-4">
+                <img src="/src/assets/free-icon-artbook-14701758.png" alt="artbook" className="w-12 h-12" />
+              </div>
+              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-23.5">
+                CREATIVE
+              </span>
             </div>
-            <div className="flex items-center mb-6">
-              <img src="/src/assets/free-icon-digital-art-12493083.png" alt="digital art" className="w-14 h-14 mr-4" />
-              <span className="text-lg">Different</span>
+
+            <div className="flex items-center mb-4 group relative">
+              <div className="w-20 h-20 bg-gradient-to-r from-teal-500 via-blue-500 to-indigo-600 animate-pulse rounded-full flex items-center justify-center mr-4">
+                <img src="/src/assets/free-icon-digital-art-12493083.png" alt="digital art" className="w-12 h-12" />
+              </div>
+              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
+                DIFFERENT
+              </span>
             </div>
           </div>
 
-          <button className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg hover:bg-pink-500 hover:scale-105 transition-all shadow-lg cursor-pointer relative z-10">
-            Live a little →
-          </button>
+          <a href="https://asoftmurmur.com/" target="_blank" rel="noopener noreferrer">
+            <button className="px-6 py-3 mt-4 mb-6 bg-pink-400 text-white rounded-full text-lg hover:bg-pink-500 hover:scale-105 transition-all duration-300 ease-in-out shadow-lg cursor-pointer relative z-10">
+              Enjoy the moment →
+            </button>
+          </a>
         </div>
       )}
     </section>
@@ -90,6 +111,9 @@ const Comparison = () => {
 };
 
 export default Comparison;
+
+
+
 
 
 
