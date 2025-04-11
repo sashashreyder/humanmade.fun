@@ -75,7 +75,7 @@ const Comparison = () => {
               <div className="w-20 h-20 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 animate-pulse rounded-full flex items-center justify-center mr-4">
                 <img src="/src/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-12 h-12" />
               </div>
-              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
+              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
                 EMOTIONAL
               </span>
             </div>
@@ -84,7 +84,7 @@ const Comparison = () => {
               <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 via-orange-600 to-red-600 animate-pulse rounded-full flex items-center justify-center mr-4">
                 <img src="/src/assets/free-icon-artbook-14701758.png" alt="artbook" className="w-12 h-12" />
               </div>
-              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-23.5">
+              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-23.5">
                 CREATIVE
               </span>
             </div>
@@ -93,7 +93,7 @@ const Comparison = () => {
               <div className="w-20 h-20 bg-gradient-to-r from-teal-500 via-blue-500 to-indigo-600 animate-pulse rounded-full flex items-center justify-center mr-4">
                 <img src="/src/assets/free-icon-digital-art-12493083.png" alt="digital art" className="w-12 h-12" />
               </div>
-              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-110 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
+              <span className="text-lg opacity-0 group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
                 DIFFERENT
               </span>
             </div>
