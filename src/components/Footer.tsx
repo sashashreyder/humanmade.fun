@@ -5,7 +5,7 @@ const Footer = () => {
           
           <div className="hidden sm:flex sm:space-x-6">
             <a 
-              href="https://www.linkedin.com/in/your-profile" 
+              href="https://www.linkedin.com/in/sashashreider/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-white hover:underline"
@@ -13,7 +13,7 @@ const Footer = () => {
               LinkedIn
             </a>
             <a 
-              href="https://github.com/your-profile" 
+              href="https://github.com/sashashreyder" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-white hover:underline"
