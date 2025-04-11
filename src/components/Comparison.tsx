@@ -3,39 +3,39 @@ import { useState } from 'react';
 const Comparison = () => {
   const [isHuman, setIsHuman] = useState(false);
   const [showParticles, setShowParticles] = useState(false);
-  const [isTemplate, setIsTemplate] = useState(true); 
+  const [isTemplate, setIsTemplate] = useState(true);
 
   const handleClick = (type: string) => {
     setIsHuman(type === 'human');
-    setIsTemplate(type === 'template'); 
+    setIsTemplate(type === 'template');
 
     if (type === 'human') {
-        setShowParticles(false); 
-        setTimeout(() => {
-          setShowParticles(true); 
-        }, 50); 
-        setTimeout(() => setShowParticles(false), 3000); 
-      }
-    };
+      setShowParticles(false);
+      setTimeout(() => {
+        setShowParticles(true);
+      }, 50);
+      setTimeout(() => setShowParticles(false), 3000);
+    }
+  };
 
   return (
     <section id="comparison" className="px-6 text-white text-center relative">
       <div className="flex justify-center items-center gap-8 mt-10 sm:flex-row sm:gap-6">
         <button
-          className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer 
+          className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer
           ${!isHuman
-              ? 'bg-gray-200 text-gray-800 hover:bg-gray-300'
-              : 'bg-transparent text-gray-500 hover:bg-transparent'
+            ? 'bg-gray-200 text-gray-800 hover:bg-gray-300'
+            : 'bg-transparent text-gray-500 hover:bg-transparent'
           } border border-gray-300`}
           onClick={() => handleClick('template')}
         >
           Template
         </button>
         <button
-          className={`relative px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer 
-            ${isHuman 
-              ? 'bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-lg' 
-              : 'bg-pink-400 text-white-500  hover:bg-pink-500 hover:text-white'}
+          className={`relative px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer
+            ${isHuman
+            ? 'bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-lg'
+            : 'bg-pink-400 text-white-500 hover:bg-pink-500 hover:text-white'}
             hover:scale-105 `}
           onClick={() => handleClick('human')}
         >
@@ -58,14 +58,14 @@ const Comparison = () => {
       {isHuman && (
         <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden">
           <video
-          className="absolute inset-0 w-full h-full object-cover"
-          src="/assets/videobg.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          disablePictureInPicture
-          style={{ pointerEvents: 'none' }}
+            className="absolute inset-0 w-full h-full object-cover"
+            src="/assets/videobg.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            disablePictureInPicture
+            style={{ pointerEvents: 'none' }}
           />
 
           <h2 className="text-4xl mt-6 mb-4 font-semibold text-white" style={{ fontFamily: 'Merienda, sans-serif', position: 'relative', zIndex: 1 }}>
@@ -123,19 +123,21 @@ const Comparison = () => {
           <h2 className="text-4xl mt-2 mb-10 font-semibold text-gray-800">
             Template Section
           </h2>
-          <div className="flex flex-col sm:flex-row justify-between sm:justify-center items-center gap-12 sm:gap-8">
-            <div className="w-full sm:w-1/2 pr-6">
-              <p className="text-lg mb-8 ml-0 sm:ml-20 text-left text-gray-700">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-12 sm:gap-8">
+            
+          <div className="w-full ml-0 sm:ml-20 sm:w-1/2 pr-0 sm:pr-6 pl-0 sm:pl-6">
+              <p className="text-lg mb-8 text-left text-gray-700">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula eros ut risus feugiat, non tincidunt eros vulputate. Ut tristique ante et turpis volutpat, sit amet volutpat nunc malesuada. Aenean ut nibh in sapien lacinia elementum.
                 <br /><br />
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vehicula eros ut risus feugiat, non tincidunt eros vulputate. Ut tristique ante et turpis volutpat, sit amet volutpat nunc malesuada. Aenean ut nibh in sapien lacinia elementum.
               </p>
             </div>
-            <div className="w-full sm:w-1/2 pl-6 flex justify-center items-center flex-col">
-              <div className="w-46 h-46 mb-6 bg-gray-300 flex justify-center items-center rounded-lg">
+            
+            <div className="w-full sm:w-1/2 pl-0 sm:pl-6 flex justify-center items-center flex-col">
+              <div className="w-full sm:w-46 h-46 mb-6 bg-gray-300 flex justify-center items-center rounded-lg">
                 <span className="text-xl text-gray-500">Your Image Here</span>
               </div>
-              <button className="px-15 py-3 mb-5 bg-gray-500 text-white rounded-full text-lg hover:bg-gray-600 transition-all duration-300 ease-in-out shadow-lg cursor-pointer">
+              <button className="w-full sm:w-auto px-10 py-2 mb-5 bg-gray-500 text-white rounded-full text-lg hover:bg-gray-600 transition-all duration-300 ease-in-out shadow-lg cursor-pointer">
                 Buy
               </button>
             </div>
@@ -147,35 +149,3 @@ const Comparison = () => {
 };
 
 export default Comparison;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
