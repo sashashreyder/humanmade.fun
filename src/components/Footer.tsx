@@ -3,7 +3,7 @@ const Footer = () => {
       <footer className="py-10 text-gray-500 text-sm bg-gradient-to-r from-purple-600 via-pink-500 to-red-500">
         <div className="max-w-7xl mx-auto px-4">
           
-          <div className="flex justify-between items-center mb-10 space-x-6">
+          <div className="hidden sm:flex sm:space-x-6">
             <a 
               href="https://www.linkedin.com/in/your-profile" 
               target="_blank" 
