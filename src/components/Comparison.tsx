@@ -17,7 +17,7 @@ const Comparison = () => {
     };
 
   return (
-    <section className="py-10 px-6 text-white text-center">
+    <section className="py-10 px-6 text-white text-center relative">
       
       <div className="flex justify-center items-center gap-30 mb-20 mt-10">
         <button
@@ -55,27 +55,30 @@ const Comparison = () => {
         </button>
       </div>
 
-      
-      {!isHuman && (
-        <div className="bg-gray-800 text-gray-400 p-8 rounded-lg shadow-xl mt-10">
-          <h2 className="text-3xl mb-4 font-semibold text-white">Template Side</h2>
-          <p className="text-lg mb-4 text-white">
-            nothing.
-          </p>
-          <button className="px-6 py-2 mt-4 bg-gray-700 text-gray-300 rounded-md text-base hover:bg-gray-600 transition-all cursor-pointer">
-            Select Template
-          </button>
-        </div>
-      )}
-
-      
       {isHuman && (
-        <div className="bg-blue-600 text-white p-8 rounded-lg shadow-xl mt-10">
-          <h2 className="text-3xl mb-4 font-semibold">Human Side</h2>
-          <p className="text-lg mb-4">
-            Creative, original....
+        <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden" 
+             style={{ backgroundImage: "url('/src/assets/coolbackgrounds-fractalize-sea_edge.png')", backgroundSize: 'cover', backgroundPosition: 'center center' }}>
+          <h2 className="text-4xl mb-6 font-semibold text-white">Human Side</h2>
+          <p className="text-xl mb-6">
+            Creative, original ideas that come from the human soul and mind.
           </p>
-          <button className="px-6 py-2 mt-4 bg-pink-600 text-white rounded-full text-lg hover:bg-pink-500 hover:scale-105 transition-all shadow-lg cursor-pointer">
+          
+          <div className="relative z-10 flex flex-col items-start">
+            <div className="flex items-center mb-4">
+              <img src="/src/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-12 h-12 mr-4" />
+              <span className="text-lg">With love</span>
+            </div>
+            <div className="flex items-center mb-4">
+              <img src="/src/assets/free-icon-artbook-14701758.png" alt="artbook" className="w-12 h-12 mr-4" />
+              <span className="text-lg">With soul</span>
+            </div>
+            <div className="flex items-center mb-4">
+              <img src="/src/assets/free-icon-digital-art-12493083.png" alt="digital art" className="w-12 h-12 mr-4" />
+              <span className="text-lg">Something else</span>
+            </div>
+          </div>
+
+          <button className="px-6 py-3 mt-4 bg-pink-600 text-white rounded-full text-lg hover:bg-pink-500 hover:scale-105 transition-all shadow-lg cursor-pointer relative z-10">
             Live a little →
           </button>
         </div>
@@ -85,6 +88,9 @@ const Comparison = () => {
 };
 
 export default Comparison;
+
+
+
 
 
 
