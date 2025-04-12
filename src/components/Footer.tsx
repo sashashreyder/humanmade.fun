@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-      <footer className="py-10 text-gray-500 text-sm bg-gradient-to-r from-purple-600 via-pink-500 to-red-500">
+      <footer className="py-10 text-gray-500 text-sm bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 relative">
         <div className="max-w-7xl mx-auto px-4">
           
           <div className="hidden sm:flex sm:space-x-6">
@@ -36,7 +36,7 @@ const Footer = () => {
             <span className="text-white">ChatGPT for assistance in speeding up my work</span>
           </div>
   
-          <p className="text-center mt:2 sm:mt-8 sm:mb-8 text-white">
+          <p className="text-center mt-2 sm:mt-8 sm:mb-8 text-white">
             Inspired by #CanvaCreate.  
             Coded with soul by Aleksandra Shreider.
           </p>
@@ -46,11 +46,20 @@ const Footer = () => {
           </div>
           
         </div>
+
+        <div className="absolute bottom-4 right-4">
+          <img 
+            src="/assets/Developed-By-Human-Not-By-AI-Badge-white@2x.png" 
+            alt="Developed by Human, Not by AI" 
+            className="w-15 sm:w-25 md:w-35 lg:w-56"
+          />
+        </div>
       </footer>
     );
 };
 
 export default Footer;
+
 
   
   
