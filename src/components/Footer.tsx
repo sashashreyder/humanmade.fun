@@ -20,7 +20,6 @@ const Footer = () => {
             >
               GitHub
             </a>
-            <span className="text-white">sashafrontenddev@gmail.com</span>
             <span className="text-white">React + TypeScript, Tailwind</span>
             <a href="https://www.canva.com" className="text-white hover:underline" target="_blank" rel="noopener noreferrer">
               Canva.com - Video Background
@@ -37,16 +36,22 @@ const Footer = () => {
             <span className="text-white">ChatGPT for assistance in speeding up my work</span>
           </div>
   
-          <p className="text-center mt-0 sm:mt-8 text-white">
+          <p className="text-center mt:2 sm:mt-8 sm:mb-8 text-white">
             Inspired by #CanvaCreate.  
             Coded with soul by Aleksandra Shreider.
           </p>
+
+          <div className="text-center sm:hidden">
+            <span className="text-white">sashafrontenddev@gmail.com</span>
+          </div>
+          
         </div>
       </footer>
     );
-  };
-  
-  export default Footer;
+};
+
+export default Footer;
+
   
   
   
