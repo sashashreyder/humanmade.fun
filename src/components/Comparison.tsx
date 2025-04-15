@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 const Comparison = () => {
   const [isHuman, setIsHuman] = useState(false);
+  const [isTemplate, setIsTemplate] = useState(true);  //default state
   const [showParticles, setShowParticles] = useState(false);
-  const [isTemplate, setIsTemplate] = useState(true);
 
   const handleClick = (type: string) => {
     setIsHuman(type === 'human');
