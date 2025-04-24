@@ -22,6 +22,7 @@ const Comparison = () => {
     <section id="comparison" className="px-6 text-white text-center relative">
       <div className="flex justify-center items-center gap-8 mt-10 sm:flex-row sm:gap-6">
         <button
+          id="templateButton"
           className={`px-5 py-3 rounded-full text-sm font-medium transition-all duration-300 cursor-pointer
           ${!isHuman
             ? 'bg-gray-200 text-gray-800 hover:bg-gray-300'
@@ -31,7 +32,8 @@ const Comparison = () => {
         >
           Template
         </button>
-        <button
+        <button 
+          id="humanButton"
           className={`relative px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 cursor-pointer
             ${isHuman
             ? 'bg-gradient-to-r from-indigo-500 to-pink-500 text-white shadow-lg'
@@ -58,6 +60,7 @@ const Comparison = () => {
       {isHuman && (
         <div className="relative p-8 rounded-lg shadow-xl mt-10 overflow-hidden">
           <video
+            id="backgroundVideo"
             className="absolute inset-0 w-full h-full object-cover"
             src="/assets/videobg.mp4"
             autoPlay
@@ -81,8 +84,8 @@ const Comparison = () => {
                 <div className="w-20 h-20 bg-gradient-to-r from-pink-400 via-purple-500 to-indigo-400 animate-pulse rounded-full flex items-center justify-center mr-4">
                   <img src="/assets/free-icon-abstract-art-14698180.png" alt="abstract art" className="w-12 h-12" />
                 </div>
-                <span className="text-lg hidden group-hover:opacity-100 group-hover:scale-120 group-hover:transition-all group-hover:duration-300 transform group-hover:relative group-hover:top-8 right-25">
-                  EMOTIONAL
+                <span className="text-lg opacity-0 group-hover:opacity-100 transform group-hover:translate-y-2 scale-95 group-hover:scale-110 transition-all duration-300 pointer-events-none">
+                 EMOTIONAL
                 </span>
               </div>
             </a>
@@ -111,7 +114,9 @@ const Comparison = () => {
           </div>
 
           <a href="https://www.rainymood.com/" target="_blank" rel="noopener noreferrer">
-            <button className="px-6 py-3 mt-4 mb-6 bg-pink-400 text-white rounded-full text-lg hover:bg-pink-500 hover:scale-105 transition-all duration-300 ease-in-out shadow-lg cursor-pointer relative z-10">
+            <button 
+            id="enjoyTheMomentButton"
+            className="px-6 py-3 mt-4 mb-6 bg-pink-400 text-white rounded-full text-lg hover:bg-pink-500 hover:scale-105 transition-all duration-300 ease-in-out shadow-lg cursor-pointer relative z-10">
               Enjoy the moment →
             </button>
           </a>

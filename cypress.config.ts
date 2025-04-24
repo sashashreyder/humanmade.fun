@@ -1,10 +1,15 @@
-const { defineConfig } = require('cypress');
+import { defineConfig } from 'cypress'
 
-module.exports = defineConfig({
+export default defineConfig({
+  projectId: 'f8f748e4-1db8-4c36-bb76-43ccd2ebc249',
   e2e: {
     setupNodeEvents(on, config) {
-      projectId: "f9pssv"
+      // future plugins go here
     },
   },
-});
+})
+
+
+
+
 
