@@ -22,7 +22,7 @@ describe('Hero section Functionality', () => {
 
 describe('comparison section, video bg is visible, buttons click', () => {
   it('displays all buttons and toggles view', () => {
-    cy.visit('http://localhost:5173')
+    cy.visit('http://localhost:5176')
     cy.get('#templateButton').click()
     cy.contains('Template Section').should('be.visible')
     cy.get('#humanButton').click()
@@ -34,7 +34,7 @@ describe('comparison section, video bg is visible, buttons click', () => {
     cy.get('[href="https://immersive-g.com/"] > .mb-4 > .w-20').click()
     cy.get('#backgroundVideo').should('be.visible').should('have.prop', 'paused', false)
     cy.get('span').contains('EMOTIONAL').invoke('show').should('be.visible')
-
+ 
     
 
   })
