@@ -2,14 +2,14 @@
 
 describe('homepage', () => {
   it('loads successfully', () => {
-    cy.visit('http://localhost:5173') 
+    cy.visit('http://localhost:5176') 
     cy.contains('Human') 
   })
 })
 
 describe('Hero section Functionality', () => {
   it('displays hero content and navigates to next section on arrow click', () => {
-    cy.visit('http://localhost:5173')
+    cy.visit('http://localhost:5176')
 
     cy.contains('Built beyond the box.').should('be.visible')
     cy.contains('Use AI as a helper, not a creator.').should('be.visible')
@@ -29,14 +29,17 @@ describe('comparison section, video bg is visible, buttons click', () => {
     cy.contains('Human').should('be.visible')  
     cy.get ('#enjoyTheMomentButton').click()
     cy.contains('Enjoy the moment →').should('be.visible')  
-    cy.get('[href="https://www.paffi.it/"] > .mb-4 > .w-20').click() 
-    cy.get('[href="https://tryboredcow.com/"] > .mb-4 > .w-20').click()
-    cy.get('[href="https://immersive-g.com/"] > .mb-4 > .w-20').click()
-    cy.get('#backgroundVideo').should('be.visible').should('have.prop', 'paused', false)
-    cy.get('span').contains('EMOTIONAL').invoke('show').should('be.visible')
- 
-    
-
+    cy.get('a[href="https://www.paffi.it/"] img[alt="abstract art"]').click()
+    cy.get('a[href="https://tryboredcow.com/"] img[alt="artbook"]').click()
+    cy.get('a[href="https://immersive-g.com/"] img[alt="digital art"]').click()
+    cy.get('#backgroundVideo').should('be.visible')
+    cy.get('a[href="https://www.paffi.it/"] .group').trigger('mouseover')
+    cy.get('a[href="https://www.paffi.it/"] .group').trigger('mouseover')
+    cy.contains('EMOTIONAL').should('be.visible')
+    cy.get('a[href="https://tryboredcow.com/"] .group').trigger('mouseover')
+    cy.contains('CREATIVE').should('be.visible')
+    cy.get('a[href="https://immersive-g.com/"] .group').trigger('mouseover')
+    cy.contains('DIFFERENT').should('be.visible')
   })
 })
 
