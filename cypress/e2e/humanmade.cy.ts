@@ -32,9 +32,9 @@ describe('comparison section, video bg is visible, buttons click', () => {
     cy.get('[href="https://www.paffi.it/"] > .mb-4 > .w-20').click() 
     cy.get('[href="https://tryboredcow.com/"] > .mb-4 > .w-20').click()
     cy.get('[href="https://immersive-g.com/"] > .mb-4 > .w-20').click()
-    cy.get('#backgroundVideo').should('be.visible') 
+    cy.get('#backgroundVideo').should('be.visible').should('have.prop', 'paused', false)
     cy.get('span').contains('EMOTIONAL').invoke('show').should('be.visible')
-    
+
     
 
   })
